@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           'Premium',
                           style: TextStyle(
-                            fontSize: 40.0,
+                            fontSize: 45.0,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'AmaticSC',
                           ),
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             'The Secrets to be Fluent in English',
                             style: TextStyle(
-                              fontSize: 17.0,
+                              fontSize: 20.0,
                             ),
                           ),
                         ),
@@ -126,20 +126,21 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             '2021 Special Early Birds Offer',
                             style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.red,
+                              fontSize: 23.0,
+                              color: Colors.redAccent,
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.underline,
-                              decorationColor: Colors.orange,
+                              decorationColor: Colors.amber,
                             ),
                           ),
                           SizedBox(height: 20.0),
                           Text(
-                            'IDR50.000 / month',
+                            'IDR15000.000 / month',
                             style: TextStyle(
-                              fontSize: 20.0,
+                              fontSize: 23.0,
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
+                              fontFamily: 'AmaticSC',
                             ),
                           ),
                           SizedBox(height: 30.0),
@@ -154,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Colors.black,
                                 width: 2.0,
                               ),
-                              backgroundColor: Colors.lightBlue,
+                              backgroundColor: Colors.teal,
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
@@ -173,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
                               decoration: TextDecoration.underline,
-                              decorationColor: Colors.orange,
+                              decorationColor: Colors.amber,
                             ),
                           ),
                         ],
