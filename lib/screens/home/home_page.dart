@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:online_course/widgets/category_button.dart';
 
-import '../../widgets/category_button.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,45 +19,47 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(15),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
-                      'Hello,',
-                      style: TextStyle(color: Colors.grey[500]),
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/images/c2.jpeg',
+                          width: 50.0,
+                        ),
+
+                        SizedBox(width: 25.0),
+                        Text(
+                          'Premium',
+                          style: TextStyle(
+                            fontSize: 40.0,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'AmaticSC',
+                          ),
+                        ),
+                      ],
                     ),
                     Row(
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 8.0),
                           child: Text(
-                            'Promlert Lovichit',
+                            'The Secrets to be Fluent in English',
                             style: TextStyle(
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 17.0,
                             ),
                           ),
-                        ),
-                        //SizedBox(width: 8.0),
-                        Image.asset(
-                          'assets/images/hand_wave.png',
-                          width: 40.0,
                         ),
                       ],
                     )
                   ],
                 ),
-                SizedBox(
-                  width: 45.0,
-                  height: 45.0,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
-                  ),
-                )
+
               ],
             ),
           ),
@@ -66,10 +69,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
-                    child: Text('Courses', style: TextStyle(fontSize: 26.0)),
-                  ),
+
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
@@ -77,23 +77,24 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Row(
                       children: [
-                        // ปุ่ม All Topics
+
                         Expanded(
                           child: CategoryButton(
-                            text: 'All Topics',
-                            icon: Icons.water_drop,
-                            color: Colors.lightBlue,
-                            isSelected: value1,
+                            text: 'Full Access to Pattern Lessons',
+
+                            color: Colors.white,
+                            isSelected: value1, imagePath: 'assets/images/e2.jpeg',
+
                           ),
                         ),
                         SizedBox(width: 16.0),
-                        // ปุ่ม Popular
+
+
                         Expanded(
                           child: CategoryButton(
-                            text: 'Popular',
-                            icon: Icons.bolt,
-                            color: Colors.pink,
-                            isSelected: true,
+                            text: 'Unlock All Limitations',
+                            color: Colors.white,
+                            isSelected: true, imagePath: 'assets/images/book.jpeg',
                           ),
                         ),
                       ],
@@ -106,46 +107,94 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Row(
                       children: [
-                        // ปุ่ม Newest
+
                         Expanded(
                           child: CategoryButton(
-                            text: 'Newest',
-                            icon: Icons.star,
-                            color: Colors.orange,
-                            isSelected: true,
+                            text: 'All Topics Available',
+
+                            color: Colors.white,
+                            isSelected: true, imagePath: 'assets/images/note.jpeg',
                           ),
                         ),
                         SizedBox(width: 16.0),
-                        // ปุ่ม Advanced
+
                         Expanded(
                           child: CategoryButton(
-                            text: 'Advanced',
-                            icon: Icons.bookmark,
-                            color: Colors.green,
-                            isSelected: true,
+                            text: 'Presonlized Coahing',
+
+                            color: Colors.white,
+                            isSelected: true, imagePath: 'assets/images/tel.jpeg',
                           ),
                         ),
                       ],
                     ),
                   ),
+                  SizedBox(height: 30.0),
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.all(20.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            value1 = !value1;
-                          });
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Text('TEST'),
-                        ),
+                      child: Column(
+                        children: [
+                          Text(
+                            '2021 Special Early Birds Offer',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.orange,
+                            ),
+                          ),
+                          SizedBox(height: 20.0),
+                          Text(
+                            'IDR50.000 / month',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+
+                            ),
+                          ),
+
+                          SizedBox(height: 30.0),
+                          ElevatedButton(
+                            onPressed: () {
+                              setState(() {
+                                value1 = !value1;
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              side: BorderSide(
+                                color: Colors.black,
+                                width: 2.0,
+                              ),
+                              backgroundColor: Colors.lightBlue,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Text('Star 3 Days Free Trail',
+                                style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.black
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20.0),
+                          Text(
+                            'View all Plan',
+                            style: TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.orange,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-
-                  CategoryButton(text: 'xxx', icon: Icons.abc , color: Colors.purple , isSelected: true)
                 ],
               ),
             ),
