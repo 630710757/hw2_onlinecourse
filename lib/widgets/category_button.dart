@@ -57,6 +57,7 @@ class CategoryButton extends StatelessWidget {
             style: TextStyle(
               fontSize: 16.0,
               color: Colors.black,
+              fontFamily: 'AmaticSC',
             ),
           ),
         ],

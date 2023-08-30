@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_course/widgets/category_button.dart';
 
-
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -28,11 +26,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
-                        Image.asset(
-                          'assets/images/c2.jpeg',
-                          width: 50.0,
-                        ),
-
+                        Image.asset('assets/images/c2.jpeg',width: 40.0,),
                         SizedBox(width: 25.0),
                         Text(
                           'Premium',
@@ -59,7 +53,6 @@ class _HomePageState extends State<HomePage> {
                     )
                   ],
                 ),
-
               ],
             ),
           ),
@@ -69,7 +62,6 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 16.0,
@@ -77,24 +69,22 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Row(
                       children: [
-
                         Expanded(
                           child: CategoryButton(
                             text: 'Full Access to Pattern Lessons',
-
                             color: Colors.white,
-                            isSelected: value1, imagePath: 'assets/images/e2.jpeg',
+                            isSelected: value1,
+                            imagePath: 'assets/images/e2.jpeg',
 
                           ),
                         ),
                         SizedBox(width: 16.0),
-
-
                         Expanded(
                           child: CategoryButton(
                             text: 'Unlock All Limitations',
                             color: Colors.white,
-                            isSelected: true, imagePath: 'assets/images/book.jpeg',
+                            isSelected: true,
+                            imagePath: 'assets/images/book.jpeg',
                           ),
                         ),
                       ],
@@ -107,23 +97,21 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Row(
                       children: [
-
                         Expanded(
                           child: CategoryButton(
                             text: 'All Topics Available',
-
                             color: Colors.white,
-                            isSelected: true, imagePath: 'assets/images/note.jpeg',
+                            isSelected: true,
+                            imagePath: 'assets/images/note.jpeg',
                           ),
                         ),
                         SizedBox(width: 16.0),
-
                         Expanded(
                           child: CategoryButton(
                             text: 'Presonlized Coahing',
-
                             color: Colors.white,
-                            isSelected: true, imagePath: 'assets/images/tel.jpeg',
+                            isSelected: true,
+                            imagePath: 'assets/images/tel.jpeg',
                           ),
                         ),
                       ],
@@ -152,10 +140,8 @@ class _HomePageState extends State<HomePage> {
                               fontSize: 20.0,
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
-
                             ),
                           ),
-
                           SizedBox(height: 30.0),
                           ElevatedButton(
                             onPressed: () {
@@ -172,11 +158,10 @@ class _HomePageState extends State<HomePage> {
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
-                              child: Text('Star 3 Days Free Trail',
+                              child: Text(
+                                'Star 3 Days Free Trail',
                                 style: TextStyle(
-                                    fontSize: 20.0,
-                                    color: Colors.black
-                                ),
+                                    fontSize: 20.0, color: Colors.black),
                               ),
                             ),
                           ),
@@ -204,4 +189,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
